@@ -8,9 +8,7 @@ yum -y install nrpe nagios-plugins-load nagios-plugins-uptime smartmontools
 mv /etc/nagios/nrpe.cfg /etc/nagios/nrpe.cfg_old
 
 echo "RAID Megacli installation and configuration"
-wget http://mirror.cogentco.com/pub/misc/MegaCli-8.07.14-1.noarch.rpm -P /root
-rpm -Uvh /root/MegaCli-8.07.14-1.noarch.rpm
-ln -sf /opt/MegaRAID/MegaCli/MegaCli64 /usr/bin/MegaCli
+rpm -Uvh http://mirror.cogentco.com/pub/misc/MegaCli-8.07.14-1.noarch.rpm
 
 echo "Nagios RAID checks installation and configuration"
 wget https://github.com/glensc/nagios-plugin-check_raid/releases/download/4.0.10/check_raid.pl -P /usr/lib64/nagios/plugins/
