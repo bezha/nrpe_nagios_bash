@@ -1,4 +1,3 @@
-<pre>
 #!/bin/bash
 
 echo "yum install nrpe and utils"
@@ -61,4 +60,3 @@ systemctl restart nrpe
 echo "Open nrpe 5666 port in Firewalld"
 firewall-cmd --zone=public --permanent --add-port=5666/tcp
 firewall-cmd --reload
-</pre>
